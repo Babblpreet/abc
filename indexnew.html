@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: "Gilroy";
+        }
+
+        a {
+          text-decoration: none;
+          font-family: "Gilroy";
+        }
+
+        button {
+          font-family: "Gilroy";
+        }
+
+        .header_links {
+          @apply text-base my-8  cursor-pointer font-medium;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="border border-[#121212]">
+      <header class="border-b-[1px] border-[#121212]">
+        <div class="flex justify-between">
+          <div class="flex">
+            <a href="" class="header_links hidden lg:block mx-[70.5px]">Shop</a>
+            <a href="" class="lg:hidden m-[12px] md:m-[16px]"
+              ><img src="./assets/svg/Menu.svg" alt=""
+            /></a>
+            <span class="border-l-[1px] border-[#121212]"></span>
+            <a href="" class="header_links hidden lg:block mx-[59px]"
+              >Contact</a
+            >
+            <span class="lg:border-l-[1px] border-[#121212]"></span>
+          </div>
+          <div class="flex">
+            <span class="lg:border-l-[1px] border-[#121212]"></span>
+            <a href="" class="header_links hidden lg:block mx-[65.5px]"
+              >Sign in</a
+            >
+            <span class="border-l-[1px] border-[#121212]"></span>
+            <a href="" class="header_links hidden lg:block mx-[73px]">Cart</a>
+            <a href="" class="lg:hidden m-[12px] md:m-[16px]"
+              ><img
+                src="./assets/svg/shopping_bag_FILL0_wght300_GRAD0_opsz24.svg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="grid grid-cols-2 relative">
+          <div
+            class="sticky p-[80px] border-r-[1px] border-b-[1px] border-[#121212]"
+          >
+            <div class="flex">
+              <h3
+                class="max-w-[435px] text-[67px] font-semibold text-[#121212] leading-[80.4px]"
+              >
+                Kyiv LuxeBouquets
+              </h3>
+              <img class="mt-[55px]" src="./assets/svg/®.svg" alt="" />
+            </div>
+          </div>
+          <div id="demo" class="grid grid-cols-2"></div>
+        </div>
+      </section>
+    </div>
+    <script>
+      const images = [
+        "card.png",
+        "card.png",
+        "card.png",
+        "card.png",
+        "card.png",
+        "card.png",
+        "card.png",
+      ];
+
+      document.getElementById("demo").innerHTML = images.map((item, index) => {
+        return `<img src="../assets/images/${item}">`;
+      });
+    </script>
+  </body>
+</html>
